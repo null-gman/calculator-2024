@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+html {
+  height: 100vh;
+}
+html body {
+  height: inherit;
+  background-color: white;
+}
+
+#alert {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99;
+  color: white;
+  background-color: rgb(88, 143, 36);
+}
+
+#main {
+  height: inherit;
+  width: inherit;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+#main section {
+  aspect-ratio: 6/8;
+  width: 30%;
+  transition: transform 150ms;
+}
+
+#history {
+  position: relative;
+  transform: translateX(50%);
+}
+#history > aside {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-100%);
+  margin: auto;
+  height: 20%;
+  aspect-ratio: 4/11;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px 0px 0px 10px;
+}
+#history .history-main {
+  height: 100%;
+  background-color: rgb(251, 111, 146);
+  overflow: hidden;
+  border-radius: 2%;
+}
+#history .history-main .title {
+  height: 15%;
+  width: 100%;
+  font-size: 3vw;
+  font-weight: 900;
+  margin: auto;
+  display: grid;
+  place-items: center;
+  color: black;
+  text-transform: capitalize;
+}
+#history .history-main .recent {
+  height: 70%;
+  padding: 4% 2%;
+}
+#history .history-main .recent main {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  height: 100%;
+  width: 100%;
+  padding: 0px 1%;
+}
+#history .history-main .recent main div {
+  cursor: pointer;
+  display: flex;
+  width: 90%;
+  padding: 2% 1%;
+  scrollbar-width: thin;
+  border: 0.1vw white solid;
+  border-radius: 0.5vw;
+  background-color: rgba(204, 132, 132, 0.6);
+  overflow-x: auto;
+  margin-bottom: 0.7vw;
+}
+#history .history-main .recent main div h3,
+#history .history-main .recent main div p {
+  font-size: 1.5vw;
+}
+#history .history-main .recent main div h3::after {
+  content: "=";
+  margin: 0px 1vw;
+  color: rgb(255, 194, 209);
+}
+#history .history-main .footer {
+  height: 15%;
+  background-color: rgb(255, 143, 171);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0PX 20px;
+  cursor: default;
+}
+#history .history-main .footer h4 {
+  position: relative;
+  margin-right: 1vw;
+  font-size: 2vw;
+  color: rgb(0, 0, 0);
+}
+#history .history-main .footer h4:hover > aside {
+  display: block;
+}
+#history .history-main .footer > p {
+  color: white;
+  background-color: rgb(88, 143, 36);
+  font-size: 2vw;
+  padding: 1vw;
+  max-width: 50%;
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+#calc {
+  transform: translateX(-50%);
+  border-radius: 2%;
+  overflow: hidden;
+  background-color: rgb(251, 111, 146);
+  padding: 2%;
+}
+#calc .output {
+  width: 100%;
+  height: 20%;
+  margin-bottom: 5%;
+  border-left: 0.9vw black solid;
+}
+#calc .output p {
+  font-size: 2vw;
+  display: flex;
+  align-items: center;
+  padding: 0px 1vw;
+  overflow: auto;
+  scrollbar-width: thin;
+  white-space: nowrap;
+}
+#calc .output .in {
+  height: 50%;
+  color: white;
+  background-color: rgb(133, 1, 1);
+}
+#calc .output .res {
+  height: 50%;
+  width: 100%;
+  color: white;
+  background-color: rgb(255, 143, 171);
+}
+#calc .output .res::before {
+  content: "=";
+  margin-right: 0.5vw;
+}
+#calc .calc-btn {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 6%;
+}
+#calc .calc-btn div {
+  user-select: none;
+}
+#calc .calc-btn article {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2%;
+}
+#calc .calc-btn article div {
+  overflow: hidden;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+#calc .calc-btn article div:hover {
+  background-color: rgb(88, 143, 36);
+}
+#calc .calc-btn article div:active {
+  background-color: rgb(88, 143, 36);
+}
+#calc .calc-btn .opraters {
+  height: 20%;
+}
+#calc .calc-btn .opraters div {
+  aspect-ratio: 1;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+#calc .calc-btn .opraters div img {
+  width: 70%;
+}
+#calc .calc-btn .opraters .multi {
+  transform: rotate(45deg);
+}
+#calc .calc-btn .numbers {
+  height: 80%;
+}
+#calc .calc-btn .numbers div {
+  display: grid;
+  place-content: center;
+  font-size: 2vw;
+  font-weight: 900;
+}
+#calc .calc-btn .numbers .equal {
+  grid-row: span 3;
+}
+
+/*# sourceMappingURL=main.css.map */

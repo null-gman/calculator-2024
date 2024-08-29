@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: black ;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body style="display:none;">
+    <aside id="alert">
+        your screen not suport ...
+    </aside>
+    <main id="main"> 
+
+        <section id="history">
+
+            <main class="history-main">
+
+                <h1 class="title">recent</h1>
+                <article class="recent">
+                    <main  id="recent">                        
+                    </main>
+                </article>
+                <footer class="footer">
+                    <h4>TOTAL = 
+                    </h4>
+                    <p id="recent-res">0</p>
+                </footer>
+
+            </main>
+
+            <aside onclick="main.open()"></aside>
+        </section>
+
+        <section id="calc">
+            <article class="output">
+                <p id="input" class="in"></p>
+                <p id="res" class="res">0</p>
+            </article>
+            <main class="calc-btn">
+                <article class="opraters">
+                    <div onclick="calc.promt('+')">
+                        <img src="plus.png" alt="" >
+                    </div>
+                    <div onclick="calc.promt('-')">
+                        <img src="minus.png" alt="">
+                    </div>
+                    <div onclick="calc.promt('×')">
+                        <img src="plus.png" alt=""  class="multi">
+                    </div>
+                    <div onclick="calc.promt('÷')">
+                        <img src="division.png" alt="" >
+                    </div>
+                </article>
+                <article class="numbers">
+                    <div onclick="calc.promt(1)">1</div>
+                    <div onclick="calc.promt(2)">2</div>
+                    <div onclick="calc.promt(3)">3</div>
+                    <div class="equal" onclick="calc.exe()">=</div>
+                    <div onclick="calc.promt(4)">4</div>
+                    <div onclick="calc.promt(5)">5</div>
+                    <div onclick="calc.promt(6)">6</div>
+                    <div onclick="calc.promt(7)">7</div>
+                    <div onclick="calc.promt(8)">8</div>
+                    <div onclick="calc.promt(9)">9</div>
+                    <div onclick="calc.ca()" ondblclick="history.ca()">CA</div>
+                    <div onclick="calc.promt(0)">0</div>
+                    <div onclick="calc.promt('.')">.</div>
+                    <div onclick="calc.rm()">del</div>
+                </article>
+            </main>
+        </section>
+   
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
