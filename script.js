@@ -35,12 +35,18 @@ calc.rm = ()=>{
 }
 calc.exe = ()=>{
     let opp = convert(calc.input.textContent);
+    
+
+    
     try {
+        if(calc.input.textContent.search(/÷÷/g) != -1) throw "error";
         eval(opp)
     } catch {
         calc.output.innerText = "Mathematical error";
         return;
     }
+
+
     let res = eval(opp);
     calc.output.innerText = res;
     opp = convert(opp)
@@ -160,22 +166,3 @@ document.body.onload = ()=>{
 
 
 
-
-
-
-/*
-
-       >aside {
-        cursor: pointer;
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        transform: translateX(-100%);
-        margin: auto;
-        height: 20%;
-        aspect-ratio: 4/11;
-        background-color: rgb(255, 255, 255);
-        border-radius: 10px 0px 0px 10px;
-    }
-*/
